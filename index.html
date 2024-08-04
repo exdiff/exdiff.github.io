@@ -23,135 +23,20 @@
         </div>
 
         <div>
-            <p style="text-align:center;"><img src="./resources/images/intro.png" alt="intro"style="width:70%;" /> </p>
+            <p style="text-align:center;"><img src="./framework2.png" alt="intro"style="width:70%;" /> </p>
         </div>
 
-        <!-- Icons-->
-        <div class="block is-center has-text-centered">
-            <a class="button is-rounded" href="./resources/article/sadma.pdf">
-                <span class="icon is-small"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span>
-                <span>Article</span>
-            </a>
-            <a class="button is-rounded" href="https://github.com/sadmaenv/sadma">
-                <span class="icon is-small"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
-                <span>Code</span>
-            </a>
-            <a class="button is-rounded" href="./chinese.html">
-                <span>中文版</span>
-            </a>
-        </div>
 
         <!-- Abstract -->
         <div class="block box" class="has-text-centered">
             <div class="has-text-centered">
                 <h2 class="title is-3"> Abstract </h2>
                 <p class="is-size-5">
-                    Multi-agent Reinforcement Learning (MARL) has shown significant success in solving large-scale complex decision-making problems while facing the challenge of increasing computational cost and training time. 
-                    MARL algorithms often require sufficient environment exploration to achieve good performance, especially for complex environments, where the interaction frequency and synchronous training scheme can severelylimit the overall speed. 
-                    Most existing RL training frameworks, which utilize distributed training for acceleration, focus on simple single-agent settings and are not scalable to extend to large-scale MARL scenarios. 
-                    To address this problem, we introduce a Scalable Asynchronous Distributed Multi-Agent RL training framework called SADMA, which modularizes the training process and executes the modules in an asynchronous and distributed manner for efficient training. 
-                    Our framework is power fully scalable and provides an efficient solution for distributed training of multi-agent reinforcement learning in large-scale complex environments.
+                    Grasping large and flat objects (e.g. a book or a pan) is often regarded as an \textit{ungraspable} task, which poses significant challenges due to the unreachable grasping poses. Previous works leverage \textit{Extrinsic Dexterity} like walls or table edges to grasp such objects. However, they are limited to task-specific policies and lack task planning to find pre-grasp conditions. This makes it difficult to adapt to various environments and extrinsic dexterity constraints. Therefore, we present DexDiff, a robust robotic manipulation method for long-horizon planning with extrinsic dexterity. Specifically, we utilize a vision-language model (VLM) to perceive the environmental state and generate high-level task plans, followed by a goal-conditioned action diffusion (GCAD) model to predict the sequence of low-level actions. This model learns the low-level policy from offline data with the cumulative reward guided by high-level planning as the goal condition, which allows for improved prediction of robot actions. Experimental results demonstrate that our method not only effectively performs ungraspable tasks but also generalizes to previously unseen objects. It outperforms baselines by a 47\% higher success rate in simulation and facilitates efficient deployment and manipulation in real-world scenarios.
                 </p>
             </div>
         </div>
 
-        <!-- Exp Experiments details  -->
-        <div class="block box is-size-4">
-            <h2 class="title is-3"> Flexible Resource Allocation </h2>
-            <div class="content">
-                Benefiting from the modularized design and unified data transfer interface,
-                each module can be flexibly combined with each other and assigned to different
-                computing nodes in the cluster regardless of the hardware device restrictions.
-                This facilitates deployment on clusters with different resource configurations.
-                Our framework naturally adapts to different resource configurations and thus can
-                fully utilize cluster resources to accelerate training.
-            </div>
-            <div class="block box">
-                <div class="columns is-mobile is-centered is-multiline is-1 is-variable">
-                    <div class="column is-one-quarter-mobile">
-                        <figure class="image">
-                            <img src="./resources/images/f1.png" alt="out"/>
-                        </figure>
-                    </div>
-                    <div class="column is-one-quarter-mobile">
-                        <figure class="image">
-                            <img src="./resources/images/f2.png" alt="out"/>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Exp Experiments details  -->
-        <div class="block box is-size-4">
-            <h2 class="title is-3"> Experiments </h2>
-            <h2 class="title is-4"> Throughput Comparisons </h2>
-            <div class="content">
-                We compare to baselines under different resource 
-                configurations for single and multiple machines settings.
-            </div>
-            <div class="block box">
-                <div class="columns is-mobile is-centered is-multiline is-1 is-variable">
-
-                    <div class="column is-one-quarter-mobile">
-                        <figure class="image">
-                            <img src="./resources/images/t1.png" alt="out"/>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <h2 class="title is-4"> Convergence Acceleration </h2>
-            <div class="content">
-                We compare the wall times of each framework to make
-                the algorithm converge with the same resource configuration.
-            </div>
-            <div class="block box">
-                <div class="columns is-mobile is-centered is-multiline is-1 is-variable">
-                    <div class="column is-one-quarter-mobile">
-                        <figure class="image">
-                            <img src="./resources/images/s1.png" alt="out"/>
-                        </figure>
-                        <figure class="image">
-                            <img src="./resources/images/s2.png" alt="out"/>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <h2 class="title is-4"> Scalability Evaluation </h2>
-            <div class="content">
-                In order to evaluate the scalability of SADMA for large-scale multi-agent environments, 
-                we constructed an environment containing 1225 agents based on the CityFlow 
-                environment, as well as a replenishment environment containing 1000 agents.
-            </div>
-            <div class="block box">
-                <div class="columns is-mobile is-centered is-multiline is-1 is-variable">
-                    <div class="column is-one-quarter-mobile">
-                        <figure class="image">
-                            <img src="./resources/images/d1.png" alt="out"/>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="block box is-size-5">
-            <h2 class="title is-3"> Citation </h2>
-                <div class="content notification">
-                    @inproceedings{ <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; wang2024SADMA, <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; title={SADMA: Scalable Asynchronous Distributed Multi-Agent Reinforcement Learning Training Framework}, <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; author={Sizhe Wang, Long Qian, Cairun Yi, Fan Wu, Qian Kou, Mingyang Li, Xingyu Chen, Xuguang Lan}, <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; booktitle={12th International Workshop on Engineering Multi-Agent Systems}, <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; year={2024}, <br />
-                    <!-- &nbsp; &nbsp; &nbsp; &nbsp; url={https://arxiv.org/abs/2209.12016} <br /> -->
-                    } <br />
-                    Wang, S., Qian, L., Yi, C., Wu, F., Kou, Q., Li, M., Chen, X., Lan, X.
-                    SADMA: Scalable Asynchronous Distributed Multi-Agent Reinforcement Learning Training Framework. 
-                    In Proceedings of 12th International Workshop on Engineering Multi-Agent Systems Co-located with AAMAS 2024, 
-                    pages 31-47, Auckland, New Zealand, May. 2024. URLhttps://emas.in.tu-clausthal.de/2024/.
-                </div>
-            </div>
-        </div>
 
     </div>
     <footer class="footer pt-5 pb-5">
