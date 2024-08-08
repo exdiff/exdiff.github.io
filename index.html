@@ -43,9 +43,9 @@
 
         <!-- Abstract -->
         <div class="block box" class="has-text-centered">
-            <div class="has-text-centered">
-                <h2 class="title is-3"> Abstract </h2>
-                <p class="is-size-5">
+            <div>
+                <h2 class="title is-3 has-text-centered"> Abstract </h2>
+                <p class="is-size-5 has-text-left">
                     Grasping large and flat objects (e.g. a book or a pan) is often regarded as an ungraspable task, which poses significant challenges due to the unreachable grasping poses. Previous works leverage Extrinsic Dexterity like walls or table edges to grasp such objects. However, they are limited to task-specific policies and lack task planning to find pre-grasp conditions. This makes it difficult to adapt to various environments and extrinsic dexterity constraints. Therefore, we present DexDiff, a robust robotic manipulation method for long-horizon planning with extrinsic dexterity. Specifically, we utilize a vision-language model (VLM) to perceive the environmental state and generate high-level task plans, followed by a goal-conditioned action diffusion (GCAD) model to predict the sequence of low-level actions. This model learns the low-level policy from offline data with the cumulative reward guided by high-level planning as the goal condition, which allows for improved prediction of robot actions. Experimental results demonstrate that our method not only effectively performs ungraspable tasks but also generalizes to previously unseen objects. It outperforms baselines by a 47% higher success rate in simulation and facilitates efficient deployment and manipulation in real-world scenarios.
                 </p>
             </div>
@@ -70,9 +70,27 @@
                     <p>&nbsp;</p>
                     <div class='video-item'>
                         <video width="600" autoplay muted controls>
+                            <source src="./3Dprinter2.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="title is-4">(b) 3D Printer(unseen)</h3>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                
+                <div class='video-container'>
+                    <div class='video-item'>
+                        <video width="600" autoplay muted controls>
                             <source src="./drawer_edge2.mp4" type="video/mp4">
                         </video>
-                        <h3 class="title is-4">(b) Storage box(seen)</h3>
+                        <h3 class="title is-4">(a) Storage box(seen)</h3>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class='video-item'>
+                        <video width="600" autoplay muted controls>
+                            <source src="./drawer2.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="title is-4">(b) Drawer(seen)</h3>
                     </div>
                 </div>
                 <p>&nbsp;</p>
